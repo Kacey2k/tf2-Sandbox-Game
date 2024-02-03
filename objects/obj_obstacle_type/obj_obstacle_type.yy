@@ -26,6 +26,9 @@
   "properties": [],
   "solid": false,
   "spriteId": null,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "collision_11x11",
+    "path": "sprites/collision_11x11/collision_11x11.yy",
+  },
   "visible": true,
 }

@@ -12,7 +12,7 @@ function engie_Movement(){
 		return;
     } else {
 				// sentry repairing script
-	if (mySentry != noone && mySentry.currentHealth < mySentry.maxHealth) {
+	if (mySentry != noone && mySentry.currentHealth < mySentry.maxHealth) && (collision_line(x, y, mySentry.x, mySentry.y, obj_obstacle_type, false, true) = noone) {
 	    
 		speed = 0.5;
 		direction = point_direction(x, y, mySentry.x, mySentry.y); // walking to sentry
@@ -32,7 +32,7 @@ function engie_Movement(){
 			
 		}
 		
-	} else if (mydispenser != noone && mydispenser.currentHealth < mydispenser.maxHealth) { // Repair Despenser script
+	} else if (mydispenser != noone && mydispenser.currentHealth < mydispenser.maxHealth) && (collision_line(x, y, mydispenser.x, mydispenser.y, obj_obstacle_type, false, true) = noone) { // Repair Despenser script
 	    
 		speed = 0.5;
 		direction = point_direction(x, y, mydispenser.x, mydispenser.y); // walking to dispenser

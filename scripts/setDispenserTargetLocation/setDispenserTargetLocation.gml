@@ -1,4 +1,4 @@
-// Set location for building a dispenser
+// Set target location for building a dispenser - homie doesnt use wall hax to place buildings anymore
 function setDispenserTargetLocation() {
     var DispenserMaxDistance = 300;
     var locationFound = false;
@@ -15,7 +15,10 @@ function setDispenserTargetLocation() {
         DispenserTargetX = clamp(DispenserTargetX, 0, room_width);
         DispenserTargetY = clamp(DispenserTargetY, 0, room_height);
 
-        if (isLocationClear(DispenserTargetX, DispenserTargetY, dispenserWidth, dispenserHeight)) {
+        if (isLocationClear(DispenserTargetX, DispenserTargetY, dispenserWidth, dispenserHeight) &&
+            collision_line(x, y, DispenserTargetX, DispenserTargetY, obj_solid, false, true) == noone &&
+            collision_line(x, y, DispenserTargetX, DispenserTargetY, obj_noaccess, false, true) == noone &&
+            collision_line(x, y, DispenserTargetX, DispenserTargetY, obj_mesh, false, true) == noone) {
             locationFound = true;
         }
     }

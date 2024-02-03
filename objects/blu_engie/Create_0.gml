@@ -27,7 +27,6 @@ wepOwnersList = ds_list_create();
 
 
 
-
 // Engineer States
 enum EngineerState {
     BuildingSentry,

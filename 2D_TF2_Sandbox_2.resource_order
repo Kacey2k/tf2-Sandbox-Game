@@ -161,6 +161,7 @@
     {"name":"particle_flash","order":4,"path":"sprites/particle_flash/particle_flash.yy",},
     {"name":"scr_movement_heavy","order":11,"path":"scripts/scr_movement_heavy/scr_movement_heavy.yy",},
     {"name":"scr_movement_demo","order":9,"path":"scripts/scr_movement_demo/scr_movement_demo.yy",},
+    {"name":"collision_11x11","order":10,"path":"sprites/collision_11x11/collision_11x11.yy",},
     {"name":"spr_red_soldier","order":2,"path":"sprites/spr_red_soldier/spr_red_soldier.yy",},
     {"name":"spr_blu_sentry_3","order":5,"path":"sprites/spr_blu_sentry_3/spr_blu_sentry_3.yy",},
     {"name":"spr_blu_engie","order":2,"path":"sprites/spr_blu_engie/spr_blu_engie.yy",},

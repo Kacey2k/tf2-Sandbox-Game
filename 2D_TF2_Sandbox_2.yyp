@@ -204,6 +204,7 @@
     {"id":{"name":"particle_flash","path":"sprites/particle_flash/particle_flash.yy",},},
     {"id":{"name":"scr_movement_heavy","path":"scripts/scr_movement_heavy/scr_movement_heavy.yy",},},
     {"id":{"name":"scr_movement_demo","path":"scripts/scr_movement_demo/scr_movement_demo.yy",},},
+    {"id":{"name":"collision_11x11","path":"sprites/collision_11x11/collision_11x11.yy",},},
     {"id":{"name":"spr_red_soldier","path":"sprites/spr_red_soldier/spr_red_soldier.yy",},},
     {"id":{"name":"spr_blu_sentry_3","path":"sprites/spr_blu_sentry_3/spr_blu_sentry_3.yy",},},
     {"id":{"name":"spr_blu_engie","path":"sprites/spr_blu_engie/spr_blu_engie.yy",},},
