@@ -1,3 +1,12 @@
+if (moveTimer > 0) {
+    moveTimer--;
+} else {
+    // Randomly choose a new direction when the timer runs out
+    moveDirection = irandom(8);
+    moveTimer = moveDuration;
+}
+
+
 if (sentryBuilt = false) {
 	mySentry = noone;
 }

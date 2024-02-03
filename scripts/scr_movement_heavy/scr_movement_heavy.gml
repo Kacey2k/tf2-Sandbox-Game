@@ -1,14 +1,14 @@
 function scr_movement_heavy(){
 	
 	// Detection Nodes, imaginary lines that trigger a timer reset if touched
-	var newx = 9
-	var newy = 9
+	var newx = 11
+	var newy = 11
 	
 	obstacle1 = instance_nearest(x, y, obj_obstacle_type);
 	//obstacle2 = instance_nearest(x, y, obj_noaccess);
 	//obstacle3 = instance_nearest(x, y, obj_mesh);
 	
-	if point_in_rectangle(obstacle1.x, obstacle1.y, x - 5, y -9, x + 5, y +9) { // Contact Box for SOLIDS
+	if point_in_rectangle(obstacle1.x, obstacle1.y, x - 6, y -10, x + 6, y +10) { // Contact Box for SOLIDS
 		moveTimer = 0;
 		direction = -direction;
 	}

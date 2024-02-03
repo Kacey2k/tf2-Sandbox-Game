@@ -52,7 +52,7 @@ function engie_Movement(){
 			
 		}
 		
-	} else {
+	} else if (mydispenser.currentHealth = mydispenser.maxHealth) && (mySentry.currentHealth = mySentry.maxHealth) {
 		
 			// Node Lengths
 			var newx = 9
