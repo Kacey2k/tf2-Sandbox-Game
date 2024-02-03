@@ -1,0 +1,1 @@
+CVar_hud = false;
