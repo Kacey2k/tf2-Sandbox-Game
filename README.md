@@ -4,7 +4,6 @@
  Currently Unfinished, however, you may take a look and play with the code that exists if you like.
 
 # Current Issues
-- [MAJOR] NPCs can phase through obstacles during combat due to how the combat movement currently works.
 - Engineer Building/Repair movement limited if an obstacle intersects building location.
 
 # TODO LIST
