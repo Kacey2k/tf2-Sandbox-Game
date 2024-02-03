@@ -5,6 +5,8 @@
 
 # Current Issues
 - Engineer Building/Repair movement limited if an obstacle intersects building location.
+- Engineer's Buildings look ugly, need to make them look cooler.
+- Muzzle Flashes placed where they may not make most sense for some entities due to code inheritance.
 
 # TODO LIST
 [MAJOR Changes]
@@ -13,6 +15,8 @@
 - Create Medic
 - Create Sniper
 - Create Spy
+- SFX update
+- Music update
 - Restructuring GUI System
 - Object & NPC Placement GUI
 - Rendering Unusual Effects on NPCs
@@ -20,6 +24,8 @@
 
 [Misc Changes]
 - Finishing Class-dependent Message banks
+- Buildings render a level up bar showing how close they are to the next level
+- Buildings have animations for upgrades & destruction
 - Pre-Built Maps!
   - Likely the following maps: Harvest, 2Fort, & Badwater.
 - Map Selection
