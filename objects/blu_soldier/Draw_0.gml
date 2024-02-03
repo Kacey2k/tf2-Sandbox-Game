@@ -6,12 +6,8 @@ var barHeight = 1;
 var xOffset = -5;
 var yOffset = -10;
 
-// SHADOW Rendering
-var ShadowWidth = sprite_get_width(spr_shadow);
-var ShadowHeight = sprite_get_height(spr_shadow);
-var ShadowXOffset = ShadowWidth - 10; // Center shadow below NPC
-var ShadowYOffset = yOffset + ShadowHeight + 11; // Position the shadow below NPC
-draw_sprite(spr_shadow, 0, x + ShadowXOffset, y + ShadowYOffset);
+// SHADOW rendering
+draw_sprite(spr_shadow, 0, x - 4, y + 2);
 
 
 // Icon
