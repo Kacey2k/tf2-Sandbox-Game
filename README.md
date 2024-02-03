@@ -5,7 +5,6 @@
 
 # Current Issues
 - [MAJOR] NPCs can phase through obstacles during combat due to how the combat movement currently works.
-- NPC shadows do not render at the correct position.
 - Engineer Building/Repair movement limited if an obstacle intersects building location.
 
 # TODO LIST
