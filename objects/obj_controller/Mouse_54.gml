@@ -1,4 +1,4 @@
-var redCharacter = irandom_range(0,4);
+var redCharacter = irandom_range(0,5);
 
 switch (redCharacter) {
     case 0: // Red Scout
@@ -17,9 +17,13 @@ switch (redCharacter) {
 		var createObject4 = instance_create_layer(mouse_x, mouse_y, "Instances", red_demo);
 		createObject4.owner = "The Entity";
 		break;
-	case 4: // Red Demoman
+	case 4: // Red Heavy
 		var createObject5 = instance_create_layer(mouse_x, mouse_y, "Instances", red_heavy);
 		createObject5.owner = "The Entity";
+		break;
+	case 5: // Red Engineer
+		var createObject6 = instance_create_layer(mouse_x, mouse_y, "Instances", red_engie);
+		createObject6.owner = "The Entity";
 		break;
 }
 

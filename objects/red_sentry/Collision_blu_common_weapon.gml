@@ -1,0 +1,1 @@
+currentHealth -= 10;

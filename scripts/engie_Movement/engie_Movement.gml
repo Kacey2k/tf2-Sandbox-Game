@@ -59,8 +59,6 @@ function engie_Movement(){
 			var newy = 9
 	
 			obstacle1 = instance_nearest(x, y, obj_obstacle_type);
-			//obstacle2 = instance_nearest(x, y, obj_noaccess);
-			//obstacle3 = instance_nearest(x, y, obj_mesh);
 	
 			if point_in_rectangle(obstacle1.x, obstacle1.y, x - 5, y -9, x + 5, y +9) { // Contact Box for SOLIDS
 				moveTimer = 0;
