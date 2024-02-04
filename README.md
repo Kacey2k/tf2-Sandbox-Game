@@ -22,6 +22,7 @@
 - Powerful In-Game Console for Debugging & User Convenience.
 
 [Misc Changes]
+- Level 3 Sentries fire rockets
 - Finishing Class-dependent Message banks
 - Buildings render a level up bar showing how close they are to the next level
 - Buildings have animations for upgrades & destruction
