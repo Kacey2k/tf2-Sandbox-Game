@@ -81,6 +81,15 @@ if (isSapped) {
 	hp -= 1;
 }
 
+if (level = 1) { // Dispenser image set depending on level
+	sprite_index = spr_blu_dispenser_1;
+} else if (level = 2) {
+	sprite_index = spr_blu_dispenser_2;
+} else if (level = 3) {
+	sprite_index = spr_blu_dispenser_3;
+}
+
+
 if (currentHealth <= 0) {
 	//presumably, some debris will go here
 	show_debug_message("NPC: " + string(owner) + "'s Dispenser " + " (" + string(id) + ")" + " has been destroyed.")

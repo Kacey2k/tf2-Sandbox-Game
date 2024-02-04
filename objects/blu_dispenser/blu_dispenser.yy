@@ -38,8 +38,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_blu_dispenser",
-    "path": "sprites/spr_blu_dispenser/spr_blu_dispenser.yy",
+    "name": "spr_blu_dispenser_1",
+    "path": "sprites/spr_blu_dispenser_1/spr_blu_dispenser_1.yy",
   },
   "spriteMaskId": null,
   "visible": true,
