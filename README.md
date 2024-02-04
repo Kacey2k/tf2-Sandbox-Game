@@ -4,13 +4,11 @@
  Currently Unfinished, however, you may take a look and play with the code that exists if you like.
 
 # Current Issues
-- Engineer's Buildings look ugly, need to make them look cooler.
 - Muzzle Flashes placed where they may not make most sense for some entities due to code inheritance.
 
 # TODO LIST
 [MAJOR Changes]
 - exe
-- Port-Engineer (And buildings) to RED Team
 - Create Medic
 - Create Sniper
 - Create Spy
