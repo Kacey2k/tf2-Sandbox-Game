@@ -6,11 +6,11 @@
 # Current Issues
 - Muzzle Flashes placed where they may not make most sense for some entities due to code inheritance.
 - Buildings Do Not have max Health when upgraded, a check for if it has been damaged before upgrading will be added in the future.
+- Medics cannot Uber - Code exist, simply not setup yet.
 
 # TODO LIST
 [MAJOR Changes]
 - exe
-- Create Medic
 - Create Sniper
 - Create Spy
 - SFX update
