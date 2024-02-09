@@ -118,6 +118,11 @@ if (isBurning) {
     }
 }
 
+var healbeamed = instance_place(x, y, heal_beam_blu);
+if (healbeamed != noone) {
+    hp += 1;
+}
+
 
 if (hp > maxhp) {
 	hp = maxhp;

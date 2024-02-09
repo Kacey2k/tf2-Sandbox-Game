@@ -2,6 +2,8 @@
 ***Required for consistency and bug-reduction
 ***Layers from top to bottom:
 
+- Effects
+	- Layer for high level effects & other top level sprites
 - Instances
 	- Main Instance Layer for Entities
 - Map

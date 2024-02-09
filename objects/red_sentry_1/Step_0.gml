@@ -1,3 +1,9 @@
+if owner = undefined {
+	owner = noone;
+	instance_destroy();
+}
+
+
 if owner.currentLevel = SentryLevel.One {
 	sprite_index = spr_red_sentry_1
 }

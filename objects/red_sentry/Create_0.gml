@@ -3,6 +3,7 @@ creator = other;
 turretOwner = id;
 maxHealth = 150;
 currentHealth = maxHealth; // Current health
+hp = currentHealth;
 level = 1;
 
 // Engie error catching var

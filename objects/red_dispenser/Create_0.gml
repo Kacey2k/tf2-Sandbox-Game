@@ -3,6 +3,7 @@ creator = noone;
 level = 1;
 maxHealth = 150; // lvl 1: 150		lvl 2: 180		lvl 3: 216
 currentHealth = maxHealth; // Current health starts with max
+hp = currentHealth;
 
 isSapped = false;
 

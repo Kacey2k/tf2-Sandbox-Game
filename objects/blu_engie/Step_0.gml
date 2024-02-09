@@ -97,7 +97,7 @@ switch (state) {
 			            var bullet = instance_create_layer(x, y, "Instances", obj_bullet_blu);
 						bullet.owner = npc_username;
 			
-			            instance_create_layer(x, y, "Instances", wep_flash);
+			            instance_create_layer(x, y, "Effects", wep_flash);
             
 			            var aim_direction = point_direction(x, y, target.x, target.y);
 			            var aim_error = irandom_range(-4, 4);
@@ -162,6 +162,12 @@ if (isBurning) {
         alarm_set(2, irandom_range(5,60));
     }
 }
+
+var healbeamed = instance_place(x, y, heal_beam_blu);
+if (healbeamed != noone) {
+    hp += 1;
+}
+
 
 if (hp > maxhp) {
 	hp = maxhp;

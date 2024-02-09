@@ -57,7 +57,7 @@ if (target != noone && point_distance(x, y, target.x, target.y) <= shooting_rang
             var bullet = instance_create_layer(x, y, "Instances", obj_bullet_red);
 			bullet.owner = npc_username;
 			
-            instance_create_layer(x, y, "Instances", wep_flash);
+            instance_create_layer(x, y, "Effects", wep_flash);
 
             var aim_direction = point_direction(x, y, target.x, target.y);
             var aim_error = irandom_range(-3, 3);
