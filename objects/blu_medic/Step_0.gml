@@ -92,15 +92,6 @@ if (place_meeting(x, y, obj_noaccess)) && (scr_avoid_collision() = false) {
 	}
 }
 
-
-var wholeMove = (vspeed * vspeed) + (hspeed * hspeed)
-
-if (wholeMove > 0) { //if moving, use animated sprite. if not, use idle sprite
-	sprite_index = spr_blu_medic_moving;
-} else {
-	sprite_index = spr_blu_medic;
-}
-
 if (isBurning) {
     if (alarm[2] < 0) { // Checks if Alarm 2 is not already running
         alarm_set(2, irandom_range(5,60));
@@ -108,16 +99,78 @@ if (isBurning) {
 }
 
 
+var wholeMove = (sqr(vspeed)) + (sqr(hspeed))
+
+if (wholeMove > 0) && ((isUbered = true) || (isUberedByOtherMedic = true)) {
+	sprite_index = spr_blu_medic_moving_ubered;
+	isChoking = false;
+} else if (wholeMove = 0) && ((isUbered = true) || (isUberedByOtherMedic = true)) {
+	sprite_index = spr_blu_medic_ubered;
+	audio_stop_sound(walk_sound_instance);
+} else if (wholeMove > 0) && ((isUbered = false) || (isUberedByOtherMedic = false)) {
+	sprite_index = spr_blu_medic_moving;
+	isChoking = false;
+} else {
+	sprite_index = spr_blu_medic;
+	audio_stop_sound(walk_sound_instance);
+}
+
+
 if (hp > maxhp) {
 	hp = maxhp;
 }
 
-if (uberPoint > uberPointMax) {
+
+
+
+if (uberPoint > uberPointMax) { // uber building
 	uberPoint = uberPointMax;
 }
-
-if (uberPoint = uberPointMax) {
+if (uberPoint = uberPointMax) { // ready to uber
 	uberReady = true;
+} else {
+	uberReady = false;
+}
+
+if (uberPoint <= 0) { // after spending uber points
+	uberPoint = 0
+	isUbered = false;
+}
+
+// if pocket is about to die, we pop. Or, if we are about to die, we pop. Medic making them smart decisions!
+if ((uberReady = true) && (instance_exists(pocket)) && (pocket.hp < (0.5 * pocket.maxhp)) && (distance_to_object(pocket) <= pocketHealRange)) || (uberReady = true) && (hp <= 30) {
+	isUbered = true;
+}
+
+if (isUbered) {
+	uberPoint -= 1;
+}
+
+// Uber Handling when a 2nd Medic Ubers me - See ALARM 4
+var healbeamed = instance_place(x, y, heal_beam_blu);
+if instance_exists(healbeamed) && (healbeamed.canIUberYou == true) {
+	var healer = healbeamed.creator;
+	if instance_exists(healer) && (healer.isUbered == true) && (healer.id != id) {
+		HealerDisconnected = false;
+		isUberedByOtherMedic = true;
+		alarm_set(4, 30);
+		hp += 5;
+	}
+} else if (healbeamed != noone) {
+	hp += 1;
+}
+
+if instance_exists(healbeamed) {
+	var healer = healbeamed.creator;
+	if instance_exists(healer) && point_distance(x, y, healer.x, healer.y) >= 35 {
+		HealerDisconnected = true;
+		isUberedByOtherMedic = false;
+		healer = noone;
+	}
+}
+
+if (isUbered = true) || (isUberedByOtherMedic = true) {
+	hp = maxhp;
 }
 
 if (hp <= 0) {			//Death Code & Killer message

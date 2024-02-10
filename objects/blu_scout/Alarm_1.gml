@@ -1,3 +1,4 @@
+/// @description Extinguish
 //Timer that extinguishes the player
 
 isBurning = false;

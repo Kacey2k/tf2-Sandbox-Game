@@ -99,7 +99,9 @@ chokeTimer = chokeTimerReset;
 //Misc Vars
 isDead = false;
 isUbered = false;
+HealerDisconnected = false;
 isBurning = false;
+isSelected = false;
 
 
 

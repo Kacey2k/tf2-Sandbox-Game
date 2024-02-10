@@ -1,3 +1,4 @@
+/// @description Burning
 //Burn Timer, each time this script runs, the player looses this much hp
 
 hp -= 3;

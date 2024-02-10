@@ -34,7 +34,9 @@ moveDuration = room_speed * 2;
 //Misc Vars
 isDead = false;
 isUbered = false;
+HealerDisconnected = false;
 isBurning = false;
+isSelected = false;
 
 // Combat Mechanics
 shooting_range = 125;

@@ -132,7 +132,7 @@ if (isBurning) {
 
 
 if (hp <= 0) {			//Death Code & Killer message
-	instance_create_layer(x, y, "Tiles", corpse_blu);
+	instance_create_layer(x, y, "Tiles", corpse_red);
 	global.playersConnected -= 1;
 	show_debug_message("NPC: " + string(npc_username) + " (" + string(id) + ")" + " has died.")
 	

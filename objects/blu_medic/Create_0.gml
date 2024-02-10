@@ -15,6 +15,7 @@ alarm[0] = irandom_range(400, 1800); //Min Seconds & Max Seconds (must update in
 alarm[1] = 0; // Extinguish Time
 alarm[2] = 0; // Burn Time
 alarm[3] = 60; // Uber build default timer
+alarm[4] = 0; // Ubered by a 2nd Medic
 npc_msgCommon = "";
 unusualEffect = false;
 npc_cosmetic = npc_cosmetics();
@@ -46,7 +47,7 @@ heal_cooldown = 10;
 cooldown_timer = heal_cooldown;
 
 uberPoint = 0;
-uberPointMax = 100;
+uberPointMax = 480; // 480 = 8 seconds of uber
 uberReady = false;
 
 
@@ -69,6 +70,8 @@ moveDuration = room_speed * 2;
 //Misc Vars
 isDead = false;
 isUbered = false;
+isUberedByOtherMedic = false;
+HealerDisconnected = false;
 isBurning = false;
 
 

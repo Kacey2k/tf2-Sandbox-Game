@@ -36,6 +36,10 @@ if (isBurning = true) {
 
 // Statistics
 draw_set_font(fn_small);
+if (isUbered) {
+	draw_set_color(c_aqua)
+	draw_text(id.x + 10, id.y + -40, "**UBERED**");
+}
 draw_set_color(c_black);
 draw_text(id.x + 10, id.y + -30, string(npc_username));
 draw_text(id.x + 10, id.y + -20, string(className));

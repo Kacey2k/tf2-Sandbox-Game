@@ -29,6 +29,14 @@ if (isBurning = true) {
 
 // Stats
 draw_set_font(fn_small);
+if (isUbered) {
+	draw_set_color(c_aqua)
+	if (state = EngineerState.BuildingDispenser) || (state = EngineerState.BuildingSentry) {
+		draw_text(id.x + 10, id.y + -50, "**UBERED**"); // place text above building state
+	} else {
+		draw_text(id.x + 10, id.y + -40, "**UBERED**");
+	}
+}
 draw_set_color(c_black);
 draw_text(id.x + 10, id.y + -30, string(npc_username));
 draw_text(id.x + 10, id.y + -20, string(className));

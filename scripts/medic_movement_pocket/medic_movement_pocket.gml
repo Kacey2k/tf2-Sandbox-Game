@@ -43,12 +43,8 @@ function medic_movement_pocket() {
         // Check for line of sight obstruction w/ pocket
         var obstruction = collision_line(x, y, pocket.x, pocket.y, obj_solid, false, true);
         if (obstruction == noone) {
-            if pocket.speed > 0 {
-				speed = pocket.speed;
-			} else {
-				speed = 1;
-			}
 			
+            speed = 0.7;
 			direction = point_direction(x, y, pocket.x, pocket.y);
 			
 			if (distance_to_object(pocket) <= pocketPersonalSpace) {
@@ -59,12 +55,13 @@ function medic_movement_pocket() {
 	            var beam = instance_create_layer(x, y, "Instances", heal_beam_blu);
 				
 				instance_create_layer(x, y, "Effects", heal_flash);
-				
-				if isUbered = true {
-					beam.canIUberYou = true;
-				}
 				beam.owner = npc_username;
 				beam.creator = id;
+				if (isUbered = true) && (distance_to_object(pocket) <= pocketHealRange) {
+					beam.canIUberYou = true;
+				} else {
+					beam.canIUberYou = false;
+				}
 				
 	            var aim_direction = point_direction(x, y, pocket.x, pocket.y);
 	            var aim_error = irandom_range(-3, 3);
@@ -96,8 +93,8 @@ function getClassPriority(class_type) {
         case blu_soldier: return 5;
         case blu_pyro: return 4;
         case blu_scout: return 3;
-		case blu_medic: return 2;
-		case blu_engie: return 1;
+		case blu_engie: return 2;
+		case blu_medic: return 1;
         default: return 0;
     }
 }
