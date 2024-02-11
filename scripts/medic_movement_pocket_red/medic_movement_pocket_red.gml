@@ -1,4 +1,4 @@
-function medic_movement_pocket() {
+function medic_movement_pocket_red() {
     if (pocket == undefined || pocket == noone) {
         pocket = noone;
         state = MedicState.Alone;
@@ -13,11 +13,11 @@ function medic_movement_pocket() {
 	// excluding dispensers, sentries, and themselves.
 	// they will then analyze if they are in range, what class they are, and how much hp they have
 	// after searching all teammates, medic selects the perfect pocket given the current circumstances they are aware of (hp / avaliable power classes)
-    with (blu_flag) {
-        if (id != other.id && object_index != blu_dispenser && object_index != blu_sentry) {
+    with (red_flag) {
+        if (id != other.id && object_index != red_dispenser && object_index != red_sentry) {
             var dist = point_distance(x, y, other.x, other.y);
             if (dist <= other.pocketDetectionRange) {
-                var class_priority = getClassPriority(object_index);
+                var class_priority = getClassPriorityRED(object_index);
                 var hp_factor = (maxhp - hp) / maxhp;
                 var dist_factor = 1 - (dist / other.pocketDetectionRange);
                 var injury_factor = (hp < maxhp) ? 10 : 0;
@@ -52,9 +52,9 @@ function medic_movement_pocket() {
 			}
 			
 	        if (can_heal) && (distance_to_object(pocket) <= pocketHealRange) {    // heal if cooldown is done
-	            var beam = instance_create_layer(x, y, "Instances", heal_beam_blu);
+	            var beam = instance_create_layer(x, y, "Instances", heal_beam_red);
 				
-				instance_create_layer(x, y, "Effects", heal_flash);
+				instance_create_layer(x, y, "Effects", heal_flash_red);
 				beam.owner = npc_username;
 				beam.creator = id;
 				if (isUbered = true) && (distance_to_object(pocket) <= pocketHealRange) {
@@ -86,17 +86,17 @@ function medic_movement_pocket() {
 // This function is how we weigh each class's priority for healing
 // Higher values = Higher priority
 // Lower values = lower priority
-function getClassPriority(class_type) {
+function getClassPriorityRED(class_type) {
     switch (class_type) {
-        case blu_heavy: return 7;
-        case blu_demo: return 6;
-        case blu_soldier: return 5;
-        case blu_pyro: return 4;
-        case blu_scout: return 3;
-		//case blu_sniper: return 4;
-		case blu_engie: return 2;
-		//case blu_spy: return 2;
-		case blu_medic: return 1;
+        case red_heavy: return 7;
+        case red_demo: return 6;
+        case red_soldier: return 5;
+        case red_pyro: return 4;
+        case red_scout: return 3;
+		//case red_sniper: return 4;
+		case red_engie: return 2;
+		//case red_spy: return 2;
+		case red_medic: return 1;
         default: return 0;
     }
 }
