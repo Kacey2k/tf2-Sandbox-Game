@@ -14,6 +14,7 @@ npc_kills = 0;
 alarm[0] = irandom_range(400, 1800); //Message Generation Alarm
 alarm[1] = 0; // Extinguish Time
 alarm[2] = 0; // Burn Time
+alarm[3] = 0; // Uber Effect Time
 npc_msgCommon = "";
 unusualEffect = false;
 npc_cosmetic = npc_cosmetics();
@@ -37,6 +38,7 @@ chokeTimer = chokeTimerReset
 //Misc Vars
 isDead = false;
 isUbered = false;
+HealerDisconnected = false;
 isBurning = false;
 
 // Combat Mechanics

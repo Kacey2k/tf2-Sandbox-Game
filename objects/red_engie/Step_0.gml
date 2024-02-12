@@ -145,16 +145,22 @@ if (place_meeting(x, y, obj_noaccess)) && (scr_avoid_collision() = false) {
 	}
 }
 
-var wholeMove = (vspeed * vspeed) + (hspeed * hspeed)
+var wholeMove = (sqr(vspeed)) + (sqr(hspeed))
 
-if (wholeMove > 0) { //if moving, use animated sprite. if not, use idle sprite
+if (wholeMove > 0) && (isUbered) { //if moving, use animated sprite. if not, use idle sprite
+	sprite_index = spr_red_engie_moving_ubered;
+} else if (wholeMove = 0) && (((state = EngineerState.BuildingDispenser) && (isUbered)) || ((state = EngineerState.BuildingSentry) && (isUbered))) {
+	sprite_index = spr_red_engie_bap_ubered; // THE BAP UBER PUSH?? WTF?
+	audio_stop_sound(walk_sound_instance);
+} else if (wholeMove = 0 ) && (isUbered) {
+	sprite_index = spr_red_engie_ubered;
+	audio_stop_sound(walk_sound_instance);
+} else if (wholeMove > 0) {
 	sprite_index = spr_red_engie_moving;
-} else if (state = EngineerState.BuildingDispenser) || (state = EngineerState.BuildingSentry) {
-		sprite_index = spr_red_engie_bap;
-		audio_stop_sound(walk_sound_instance);
+} else if (wholeMove = 0) && (state = EngineerState.BuildingDispenser || state = EngineerState.BuildingSentry) {
+	sprite_index = spr_red_engie_bap;
 } else {
 	sprite_index = spr_red_engie;
-	audio_stop_sound(walk_sound_instance);
 }
 
 if (isBurning) {
@@ -162,6 +168,35 @@ if (isBurning) {
         alarm_set(2, irandom_range(5,60));
     }
 }
+
+// Uber Handling - See ALARM 3
+var healbeamed = instance_place(x, y, heal_beam_red);
+if (instance_exists(healbeamed)) && distance_to_object(healbeamed) <= 5 {
+	var healer = healbeamed.creator
+	hp += 1;
+	isUbered = false;
+	if instance_exists(healer) && (healer.isUbered = true) {
+		HealerDisconnected = false;
+		isUbered = true;
+		alarm_set(3, 30);
+		hp += 5;
+	}
+}
+
+if instance_exists(healbeamed) {
+	var healer = healbeamed.creator;
+	if instance_exists(healer) && point_distance(x, y, healer.x, healer.y) >= 35 {
+		HealerDisconnected = true;
+		isUbered = false;
+		healer = noone;
+	}
+}
+
+if (isUbered = true) {
+	hp = maxhp;
+	isBurning = false;
+}
+
 
 if (hp > maxhp) {
 	hp = maxhp;
