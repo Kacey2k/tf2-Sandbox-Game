@@ -1,4 +1,4 @@
-var bluCharacter = irandom_range(0,6);
+var bluCharacter = irandom_range(0,7);
 
 switch (bluCharacter) {
     case 0: // Blu Scout
@@ -29,6 +29,9 @@ switch (bluCharacter) {
 		var createObject7 = instance_create_layer(mouse_x, mouse_y, "Instances", blu_medic);
 		createObject7.owner = "The Universe";
 		break;
+	case 7: // Blu Sniper
+		var createObject8 = instance_create_layer(mouse_x, mouse_y, "Instances", blu_sniper);
+		createObject7.owner = "The Universe";
 }
 
 show_debug_message("#Input: Global Right Pressed Attempted")

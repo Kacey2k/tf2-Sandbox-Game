@@ -478,6 +478,9 @@
     {"name":"inst_3FFD1DAA","path":"rooms/map_harvest/map_harvest.yy",},
     {"name":"inst_5C744B68","path":"rooms/map_harvest/map_harvest.yy",},
     {"name":"inst_3F4F479E","path":"rooms/map_harvest/map_harvest.yy",},
+    {"name":"inst_1015965B","path":"rooms/map_harvest/map_harvest.yy",},
+    {"name":"inst_6DF12F49","path":"rooms/map_harvest/map_harvest.yy",},
+    {"name":"inst_3D5641F","path":"rooms/map_harvest/map_harvest.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -485,6 +488,9 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":10,"gridY":10,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C744B68","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"red_medic","path":"objects/red_medic/red_medic.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":440.0,"y":150.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3F4F479E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"red_soldier","path":"objects/red_soldier/red_soldier.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":400.0,"y":140.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1015965B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"blu_sniper","path":"objects/blu_sniper/blu_sniper.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":270.0,"y":350.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6DF12F49","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"blu_sniper","path":"objects/blu_sniper/blu_sniper.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":190.0,"y":290.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3D5641F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"blu_sniper","path":"objects/blu_sniper/blu_sniper.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"MapDebug2","depth":200,"effectEnabled":true,"effectType":null,"gridX":10,"gridY":10,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_8E6CE8C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"wall_steel","path":"objects/wall_steel/wall_steel.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":370.0,"y":300.0,},
