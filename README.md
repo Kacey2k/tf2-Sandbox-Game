@@ -11,7 +11,6 @@
 # TODO LIST
 [MAJOR Changes]
 - exe
-- Create Sniper
 - Create Spy
 - SFX update
 - Music update
