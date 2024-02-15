@@ -6,7 +6,26 @@ if (moveTimer > 0) {
     moveTimer = moveDuration;
 }
 
+if scoped = true {
+	if (scopedMoveTimer > 0) {
+		scopedMoveTimer -= 1;
+	} else {
+		// Switch Scoped Movement Direction
+		scopedMoveDirection = irandom(6);
+		scopedMoveTimer = scopedMoveTimerReset;
+	}
+}
 
+icon_frame += icon_image_speed;
+if (scoped) {
+    if (icon_frame >= sprite_get_number(ico_blu_sniper_scoped)) {
+        icon_frame = 0;
+    }
+} else {
+    if (icon_frame >= sprite_get_number(ico_blu_sniper)) {
+        icon_frame = 0;
+    }
+}
 
 
 //                                          Core Movement & Combat Loop
@@ -42,11 +61,16 @@ if (damageCheck != noone && nearestDistance <= damage_range) {
 
 // Sniper Logic
 var target = instance_nearest(x, y, red_flag);
-var obstruction = collision_line(x, y, target.x, target.y, obj_solid, false, true);
+
+if instance_exists(target) {
+	targetObstruction = collision_line(x, y, target.x, target.y, obj_solid, false, true);
+} else {
+	targetObstruction = noone;
+}
 
 switch (state) {
 	case SniperState.Roaming: // Roaming
-		if (target != noone) && (obstruction = noone) {
+		if (target != noone) && (targetObstruction = noone) {
 			state = SniperState.Scoped;
 			break;
 		} else {
@@ -57,7 +81,7 @@ switch (state) {
 		if distance_to_object(target) > detectionDistance {
 			state = SniperState.Roaming;
 			break;
-		} else if (distance_to_object(target) <= escapeDistance) && (obstruction == noone) {
+		} else if (distance_to_object(target) <= escapeDistance) && (targetObstruction == noone) {
 			state = SniperState.Escaping;
 			break;
 		} else {
@@ -140,17 +164,16 @@ if (wholeMove > 0) && (isUbered = true) {
 
 // Uber Handling - See ALARM 3
 var healbeamed = instance_place(x, y, heal_beam_blu);
-if (instance_exists(healbeamed)) {
+if (instance_exists(healbeamed)) && distance_to_object(healbeamed) <= 5 {
 	var healer = healbeamed.creator
+	hp += 1;
+	isUbered = false;
 	if instance_exists(healer) && (healer.isUbered = true) {
 		HealerDisconnected = false;
 		isUbered = true;
 		alarm_set(3, 30);
 		hp += 5;
 	}
-} else if (instance_exists(healbeamed)) && (healbeamed != noone) {
-	hp += 1;
-	isUbered = false;
 }
 
 if instance_exists(healbeamed) {

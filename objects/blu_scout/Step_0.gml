@@ -132,17 +132,16 @@ if (wholeMove > 0) && (isUbered = true) {
 
 // Uber Handling - See ALARM 3
 var healbeamed = instance_place(x, y, heal_beam_blu);
-if (instance_exists(healbeamed)) {
+if (instance_exists(healbeamed)) && distance_to_object(healbeamed) <= 5 {
 	var healer = healbeamed.creator
+	hp += 1;
+	isUbered = false;
 	if instance_exists(healer) && (healer.isUbered = true) {
 		HealerDisconnected = false;
 		isUbered = true;
 		alarm_set(3, 30);
 		hp += 5;
 	}
-} else if (instance_exists(healbeamed)) && (healbeamed != noone) {
-	hp += 1;
-	isUbered = false;
 }
 
 if instance_exists(healbeamed) {

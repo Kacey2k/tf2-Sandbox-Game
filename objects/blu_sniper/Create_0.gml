@@ -29,6 +29,17 @@ show_debug_message("NPC Spawn Event [ Username: " + string(npc_username) + " | C
 
 // Sniper Vars
 
+icon_frame = 0;
+icon_image_speed = 0.2;
+
+
+scoped = false;
+scopedMoveDirection = -1;
+scopedMoveTimerReset = 60;
+scopedMoveTimer = scopedMoveTimerReset;
+
+targetObstruction = noone;
+
 enum SniperState {
 	Roaming, // No Target Detected
 	Scoped, // Target Detected, Aim and Fire

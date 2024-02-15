@@ -334,6 +334,7 @@
     {"id":{"name":"blu_grenade_blast","path":"objects/blu_grenade_blast/blu_grenade_blast.yy",},},
     {"id":{"name":"script_msg_killer_taunt","path":"scripts/script_msg_killer_taunt/script_msg_killer_taunt.yy",},},
     {"id":{"name":"red_flag","path":"objects/red_flag/red_flag.yy",},},
+    {"id":{"name":"ico_blu_sniper_scoped","path":"sprites/ico_blu_sniper_scoped/ico_blu_sniper_scoped.yy",},},
     {"id":{"name":"blu_healet","path":"objects/blu_healet/blu_healet.yy",},},
     {"id":{"name":"blu_dispenser","path":"objects/blu_dispenser/blu_dispenser.yy",},},
     {"id":{"name":"scr_avoid_collision","path":"scripts/scr_avoid_collision/scr_avoid_collision.yy",},},

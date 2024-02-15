@@ -24,22 +24,35 @@ var iconHeight = sprite_get_height(ico_blu_sniper);
 var iconXOffset = -iconWidth / 2; // Center the icon horizontally above NPC
 var iconYOffset = yOffset - iconHeight - 5; // Position the icon above the health bar with a 5px gap
 
-draw_sprite(ico_blu_sniper, 0, x + iconXOffset, y + iconYOffset);
+if (scoped) {
+    draw_sprite(ico_blu_sniper_scoped, floor(icon_frame), x + iconXOffset, y + iconYOffset);
+} else {
+    draw_sprite(ico_blu_sniper, floor(icon_frame), x + iconXOffset, y + iconYOffset);
+}
 
 
-// FIREEEEEEEEEEEEEEE
-if (isBurning = true) {
+draw_set_font(fn_small);
+
+if (scoped) {
+	draw_set_color(c_aqua);
+	draw_text(id.x + 10, id.y + -40, "*SCOPED*");
+	if (isBurning) {
+		draw_sprite(particle_burn_2, -1, x + irandom_range(-2,2), y + irandom_range(-3,3));
+		draw_set_color(c_red);
+		draw_text(id.x + 10, id.y + -50, "**ON FIRE!**");
+	} else if (isUbered) {
+		draw_set_color(c_aqua)
+		draw_text(id.x + 10, id.y + -50, "**UBERED**");
+	}
+} else if (isBurning = true) && (scoped = false) {
 	draw_sprite(particle_burn_2, -1, x + irandom_range(-2,2), y + irandom_range(-3,3));
 	draw_set_color(c_red);
 	draw_text(id.x + 10, id.y + -40, + "**ON FIRE!**");
-}
-
-// Statistics
-draw_set_font(fn_small);
-if (isUbered) {
+} else if (scoped = false) && (isUbered) {
 	draw_set_color(c_aqua)
 	draw_text(id.x + 10, id.y + -40, "**UBERED**");
 }
+
 draw_set_color(c_black);
 draw_text(id.x + 10, id.y + -30, string(npc_username));
 draw_text(id.x + 10, id.y + -20, string(className));

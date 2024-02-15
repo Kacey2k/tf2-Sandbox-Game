@@ -276,6 +276,7 @@
     {"name":"blu_grenade_blast","order":7,"path":"objects/blu_grenade_blast/blu_grenade_blast.yy",},
     {"name":"script_msg_killer_taunt","order":4,"path":"scripts/script_msg_killer_taunt/script_msg_killer_taunt.yy",},
     {"name":"red_flag","order":1,"path":"objects/red_flag/red_flag.yy",},
+    {"name":"ico_blu_sniper_scoped","order":8,"path":"sprites/ico_blu_sniper_scoped/ico_blu_sniper_scoped.yy",},
     {"name":"blu_healet","order":9,"path":"objects/blu_healet/blu_healet.yy",},
     {"name":"scr_movement_combat_heavy_RED","order":12,"path":"scripts/scr_movement_combat_heavy_RED/scr_movement_combat_heavy_RED.yy",},
     {"name":"ico_red_medic","order":6,"path":"sprites/ico_red_medic/ico_red_medic.yy",},

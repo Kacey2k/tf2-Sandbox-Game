@@ -4,6 +4,8 @@ function sniper_roaming(){
 	var newx = 9
 	var newy = 9
 	
+	scoped = false;
+	
 	obstacle1 = instance_nearest(x, y, obj_obstacle_type);
 	
 	if point_in_rectangle(obstacle1.x, obstacle1.y, x - 5, y -9, x + 5, y +9) { // Contact Box for SOLIDS

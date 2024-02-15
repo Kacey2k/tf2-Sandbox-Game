@@ -148,16 +148,16 @@ if (isUbered) {
 
 // Uber Handling when a 2nd Medic Ubers me - See ALARM 4
 var healbeamed = instance_place(x, y, heal_beam_blu);
-if instance_exists(healbeamed) && (healbeamed.canIUberYou == true) {
-	var healer = healbeamed.creator;
-	if instance_exists(healer) && (healer.isUbered == true) && (healer.id != id) {
+if (instance_exists(healbeamed)) && distance_to_object(healbeamed) <= 5 {
+	var healer = healbeamed.creator
+	hp += 1;
+	isUberedByOtherMedic = false;
+	if instance_exists(healer) && (healer.isUbered = true) && (healer.id != id) {
 		HealerDisconnected = false;
 		isUberedByOtherMedic = true;
-		alarm_set(4, 30);
+		alarm_set(3, 30);
 		hp += 5;
 	}
-} else if (healbeamed != noone) {
-	hp += 1;
 }
 
 if instance_exists(healbeamed) {

@@ -1,11 +1,13 @@
 function sniper_escaping(){
 	
+	scoped = false;
+	
 	var target = instance_nearest(x, y, red_flag);
 	
 	if (instance_exists(target)) && (target != noone) && (distance_to_object(target) <= escapeDistance) {
 		
 		var obstruction = collision_line(x, y, target.x, target.y, obj_solid, false, true);
-		if instance_exists(obstruction) && (obstruction == noone) {
+		if (obstruction == noone) {
 			
 			if (can_shoot_SMG) {
 	            var bullet = instance_create_layer(x, y, "Instances", obj_bullet_blu);
