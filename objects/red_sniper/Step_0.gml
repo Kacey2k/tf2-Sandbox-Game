@@ -34,7 +34,7 @@ if (scoped) {
 //											Killer Logic (get it?)
 var damageCheck = noone;
 var nearestDistance = -1;
-var objectsToCheck = [obj_bullet_red, red_rocket, red_fire];
+var objectsToCheck = [obj_bullet_blu, blu_rocket, blu_fire];
 
 // Iterate through the array of objects
 for (var i = 0; i < array_length_1d(objectsToCheck); i++) {
@@ -60,7 +60,7 @@ if (damageCheck != noone && nearestDistance <= damage_range) {
 
 
 // Sniper Logic
-var target = instance_nearest(x, y, red_flag);
+var target = instance_nearest(x, y, blu_flag);
 
 if instance_exists(target) {
 	targetObstruction = collision_line(x, y, target.x, target.y, obj_solid, false, true);
@@ -75,7 +75,7 @@ switch (state) {
 			break;
 		} else {
 			scoped = false;
-			sniper_roaming();
+			sniper_roaming_red();
 			break;
 		}
 	case SniperState.Scoped: // Scoped In
@@ -87,7 +87,7 @@ switch (state) {
 			break;
 		} else {
 			scoped = true;
-			sniper_scoped();
+			sniper_scoped_red();
 			break;
 		}
 	case SniperState.Escaping: // Escaping with SMG out
@@ -96,7 +96,7 @@ switch (state) {
 			break;
 		} else {
 			scoped = false;
-			sniper_escaping();
+			sniper_escaping_red();
 			break;
 		}
 }
@@ -151,22 +151,22 @@ if (isBurning) {
 var wholeMove = (sqr(vspeed)) + (sqr(hspeed))
 
 if (wholeMove > 0) && (isUbered = true) {
-	sprite_index = spr_blu_sniper_moving_ubered;
+	sprite_index = spr_red_sniper_moving_ubered;
 	isChoking = false;
 } else if (wholeMove = 0) && (isUbered = true) {
-	sprite_index = spr_blu_sniper_ubered;
+	sprite_index = spr_red_sniper_ubered;
 	audio_stop_sound(walk_sound_instance);
 } else if (wholeMove > 0) && (isUbered = false) {
-	sprite_index = spr_blu_sniper_moving;
+	sprite_index = spr_red_sniper_moving;
 	isChoking = false;
 } else {
-	sprite_index = spr_blu_sniper;
+	sprite_index = spr_red_sniper;
 	audio_stop_sound(walk_sound_instance);
 }
 
 
 // Uber Handling - See ALARM 3
-var healbeamed = instance_place(x, y, heal_beam_blu);
+var healbeamed = instance_place(x, y, heal_beam_red);
 if (instance_exists(healbeamed)) && distance_to_object(healbeamed) <= 5 {
 	var healer = healbeamed.creator
 	hp += 1;
@@ -200,7 +200,7 @@ if (hp > maxhp) {
 }
 
 if (hp <= 0) {			//Death Code & Killer message
-	instance_create_layer(x, y, "Tiles", corpse_blu);
+	instance_create_layer(x, y, "Tiles", corpse_red);
 	global.playersConnected -= 1;
 	show_debug_message("NPC: " + string(npc_username) + " (" + string(id) + ")" + " has died.")
 	

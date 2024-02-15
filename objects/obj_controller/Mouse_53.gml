@@ -32,6 +32,7 @@ switch (bluCharacter) {
 	case 7: // Blu Sniper
 		var createObject8 = instance_create_layer(mouse_x, mouse_y, "Instances", blu_sniper);
 		createObject8.owner = "The Universe";
+		break;
 }
 
 show_debug_message("#Input: Global Right Pressed Attempted")

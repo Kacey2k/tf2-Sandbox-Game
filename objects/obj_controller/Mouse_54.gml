@@ -1,4 +1,4 @@
-var redCharacter = irandom_range(0,6);
+var redCharacter = irandom_range(0,7);
 
 switch (redCharacter) {
     case 0: // Red Scout
@@ -27,7 +27,12 @@ switch (redCharacter) {
 		break;
 	case 6: // Red Medic
 		var createObject7 = instance_create_layer(mouse_x, mouse_y, "Instances", red_medic);
-		createObject7.owner = "The Universe"
+		createObject7.owner = "The Universe";
+		break;
+	case 7: // Red Sniper
+		var createObject8 = instance_create_layer(mouse_x, mouse_y, "Instances", red_sniper);
+		createObject8.owner = "The Universe";
+		break;
 }
 
 show_debug_message("#Input: Global Left Pressed Attempted")

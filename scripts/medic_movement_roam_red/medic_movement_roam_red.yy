@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "medic",
-    "path": "folders/Scripts/movement/medic.yy",
+    "name": "medic red",
+    "path": "folders/Scripts/movement/medic/medic red.yy",
   },
 }
