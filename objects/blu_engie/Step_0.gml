@@ -98,6 +98,7 @@ switch (state) {
 						bullet.owner = npc_username;
 			
 			            instance_create_layer(x, y, "Effects", wep_flash);
+						sound_engie_fire();
             
 			            var aim_direction = point_direction(x, y, target.x, target.y);
 			            var aim_error = irandom_range(-4, 4);

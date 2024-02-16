@@ -63,3 +63,6 @@ move_cooldown = move_cooldown_timer;
 
 walk_sound_instance = audio_play_sound(snd_walk, 10, false);
 audio_stop_sound(walk_sound_instance); // Stop it immediately so it can be started in the animation end script
+
+shoot_sound = audio_play_sound(snd_shoot_gatling, 10, false);
+audio_stop_sound(shoot_sound);
