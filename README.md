@@ -24,6 +24,7 @@
 - Powerful In-Game Console for Debugging & User Convenience.
 
 ## [Misc Changes]
+- NPC Stats (NPC names, class, states, and icons) only visible when hovering.
 - Level 3 Sentries fire rockets
 - Buildings have more randomized orientation
 - Building animation + destruction animation
