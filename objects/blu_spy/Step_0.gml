@@ -40,7 +40,19 @@ if (damageCheck != noone && nearestDistance <= damage_range) {
 
 
 
+// place spy state controller here v v  v
+
 var target = instance_nearest(x, y, red_flag);
+
+switch (state) {
+	case SpyState.Roaming:
+		//code here
+		spy_roaming();
+		break;
+	case SpyState.Targeting:
+		//code here
+		break;
+}
 
 // Targeting and Movement
 if (target != noone && point_distance(x, y, target.x, target.y) <= shooting_range) {
@@ -64,10 +76,10 @@ if (target != noone && point_distance(x, y, target.x, target.y) <= shooting_rang
             can_shoot = false;
         }
     } else {
-        scr_movement();  // Normal movement
+        spy_roaming();  // Normal movement
     }
 } else {
-    scr_movement();  // No target, normal movement
+    spy_roaming();  // No target, normal movement
 }
 
 
@@ -113,17 +125,24 @@ if (isBurning) {
 
 var wholeMove = (sqr(vspeed)) + (sqr(hspeed))
 
+if wholeMove > 0 && (cloaked) {
+	cloakTimer -= 1;
+	if cloakTimer <= 0 {
+		cloaked = false;
+	}
+}
+
 if (wholeMove > 0) && (isUbered = true) {
-	sprite_index = spr_blu_scout_moving_ubered;
+	sprite_index = spr_blu_spy_moving_ubered;
 	isChoking = false;
 } else if (wholeMove = 0) && (isUbered = true) {
-	sprite_index = spr_blu_scout_ubered;
+	sprite_index = spr_blu_spy_ubered;
 	audio_stop_sound(walk_sound_instance);
 } else if (wholeMove > 0) && (isUbered = false) {
-	sprite_index = spr_blu_scout_moving;
+	sprite_index = spr_blu_spy_moving;
 	isChoking = false;
 } else {
-	sprite_index = spr_blu_scout;
+	sprite_index = spr_blu_spy;
 	audio_stop_sound(walk_sound_instance);
 }
 

@@ -88,14 +88,14 @@ function medic_movement_pocket() {
 // Lower values = lower priority
 function getClassPriority(class_type) {
     switch (class_type) {
-        case blu_heavy: return 7;
-        case blu_demo: return 6;
-        case blu_soldier: return 5;
-        case blu_pyro: return 4;
-        case blu_scout: return 3;
+        case blu_heavy: return 8;
+        case blu_demo: return 7;
+        case blu_soldier: return 6;
+        case blu_pyro: return 5;
+        case blu_scout: return 4;
 		//case blu_sniper: return 4;
-		case blu_engie: return 2;
-		//case blu_spy: return 2;
+		case blu_engie: return 3;
+		case blu_spy: return 2;
 		case blu_medic: return 1;
         default: return 0;
     }

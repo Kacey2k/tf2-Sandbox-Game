@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6311a61f-6c08-4c12-9e3a-d28d02986e11",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ddb5da0d-3f61-4177-914d-22fdec1366d3",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e002e7f9-c2e5-4e49-ae4c-75fef404f760",},
   ],
   "gridX": 0,
@@ -48,14 +48,14 @@
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 11.0,
+    "playbackSpeed": 9.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6311a61f-6c08-4c12-9e3a-d28d02986e11","path":"sprites/spr_blu_spy_moving/spr_blu_spy_moving.yy",},},},"Disabled":false,"id":"f85eb664-2e99-49ed-8c64-180a3d0cfc99","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ddb5da0d-3f61-4177-914d-22fdec1366d3","path":"sprites/spr_blu_spy_moving/spr_blu_spy_moving.yy",},},},"Disabled":false,"id":"91f48f12-e0b2-477d-8549-876e1bb71083","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e002e7f9-c2e5-4e49-ae4c-75fef404f760","path":"sprites/spr_blu_spy_moving/spr_blu_spy_moving.yy",},},},"Disabled":false,"id":"7d7ce194-2a29-428e-96a4-cca83e4055a1","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

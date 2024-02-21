@@ -29,8 +29,20 @@ show_debug_message("NPC Spawn Event [ Username: " + string(npc_username) + " | C
 // Spy Vars
 
 seen = false;
+canCloak = true;
 cloaked = false;
+cloakTimerReset = 540;
+cloakTimer = cloakTimerReset;
+detectionDistance = 300;
 
+disguised = false;
+
+enum SpyState { // Roaming when no targets in sight - Targeting when target in sight
+	Roaming,
+	Targeting
+}
+
+state = SpyState.Roaming;
 
 
 
