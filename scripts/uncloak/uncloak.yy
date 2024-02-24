@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "medic_movement_pocket",
+  "name": "uncloak",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "medic",
-    "path": "folders/Scripts/Logic/medic.yy",
+    "name": "spy",
+    "path": "folders/Scripts/Logic/spy.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "sniper red",
-    "path": "folders/Scripts/movement/sniper/sniper red.yy",
+    "path": "folders/Scripts/Logic/sniper/sniper red.yy",
   },
 }

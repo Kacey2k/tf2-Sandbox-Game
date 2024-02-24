@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "movement",
-    "path": "folders/Scripts/movement.yy",
+    "name": "Logic",
+    "path": "folders/Scripts/Logic.yy",
   },
 }

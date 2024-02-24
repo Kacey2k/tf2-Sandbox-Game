@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "engie",
-    "path": "folders/Scripts/movement/engie.yy",
+    "path": "folders/Scripts/Logic/engie.yy",
   },
 }

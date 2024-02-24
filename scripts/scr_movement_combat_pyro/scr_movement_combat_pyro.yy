@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "pyro",
-    "path": "folders/Scripts/movement/pyro.yy",
+    "path": "folders/Scripts/Logic/pyro.yy",
   },
 }

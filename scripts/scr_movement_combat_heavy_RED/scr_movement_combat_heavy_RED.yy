@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "heavy",
-    "path": "folders/Scripts/movement/heavy.yy",
+    "path": "folders/Scripts/Logic/heavy.yy",
   },
 }

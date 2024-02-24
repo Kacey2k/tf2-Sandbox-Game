@@ -28,7 +28,7 @@ show_debug_message("NPC Spawn Event [ Username: " + string(npc_username) + " | C
 
 // Spy Vars
 
-seen = false;
+seen = true;
 canCloak = true;
 cloaked = false;
 cloakTimerReset = 540;
