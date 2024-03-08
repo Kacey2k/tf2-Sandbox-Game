@@ -1,5 +1,5 @@
-function uncloak(){
-
+function s_uncloak(){
+	// this function increases spy's sprite transparency and switches his states afterwards
 	if cloaked = true {
 		image_alpha += 0.01;
 	}

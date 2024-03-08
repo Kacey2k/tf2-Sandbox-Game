@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "isLocationClear",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "engie",
-    "path": "folders/Scripts/Logic/engie.yy",
+  "$GMScript":"",
+  "%Name":"isLocationClear",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"isLocationClear",
+  "parent":{
+    "name":"engie",
+    "path":"folders/Scripts/Logic/engie.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

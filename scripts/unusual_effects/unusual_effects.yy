@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "unusual_effects",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "NPC",
-    "path": "folders/Scripts/NPC.yy",
+  "$GMScript":"",
+  "%Name":"unusual_effects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"unusual_effects",
+  "parent":{
+    "name":"NPC",
+    "path":"folders/Scripts/NPC.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

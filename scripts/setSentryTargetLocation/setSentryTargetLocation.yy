@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "setSentryTargetLocation",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "engie",
-    "path": "folders/Scripts/Logic/engie.yy",
+  "$GMScript":"",
+  "%Name":"setSentryTargetLocation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setSentryTargetLocation",
+  "parent":{
+    "name":"engie",
+    "path":"folders/Scripts/Logic/engie.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

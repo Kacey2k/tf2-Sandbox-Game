@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_movement_combat_soldier",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "soldier",
-    "path": "folders/Scripts/Logic/soldier.yy",
+  "$GMScript":"",
+  "%Name":"scr_movement_combat_soldier",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_movement_combat_soldier",
+  "parent":{
+    "name":"soldier",
+    "path":"folders/Scripts/Logic/soldier.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

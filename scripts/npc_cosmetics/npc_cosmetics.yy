@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "npc_cosmetics",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "NPC",
-    "path": "folders/Scripts/NPC.yy",
+  "$GMScript":"",
+  "%Name":"npc_cosmetics",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"npc_cosmetics",
+  "parent":{
+    "name":"NPC",
+    "path":"folders/Scripts/NPC.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

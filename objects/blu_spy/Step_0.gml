@@ -37,10 +37,82 @@ if (damageCheck != noone && nearestDistance <= damage_range) {
     }
 }
 
+switch setDisguise { // Since this is the BLU spy, disguises will be of RED players
+	case 0:
+		disguisedAs = "Scout";
+		disguiseWalkSpeed = 0.6; //cannot exceed spy's max speed for scout
+		disguiseWalk = spr_red_scout_moving;
+		disguiseIdleUber = spr_red_scout_ubered;
+		disguiseWalkUber = spr_red_scout_moving_ubered;
+		disguiseIdle = spr_red_scout;
+		break;
+	case 1:
+		disguisedAs = "Soldier";
+		disguiseWalkSpeed = 0.4;
+		disguiseWalk = spr_red_soldier_moving;
+		disguiseIdleUber = spr_red_soldier_ubered;
+		disguiseWalkUber = spr_red_soldier_moving_ubered;
+		disguiseIdle = spr_red_soldier;
+		break;
+	case 2:
+		disguisedAs = "Pyro";
+		disguiseWalkSpeed = 0.5;
+		disguiseWalk = spr_red_pyro_moving;
+		disguiseIdleUber = spr_red_pyro_ubered;
+		disguiseWalkUber = spr_red_pyro_moving_ubered;
+		disguiseIdle = spr_red_pyro;
+		break;
+	case 3:
+		disguisedAs = "Demoman";
+		disguiseWalkSpeed = 0.45;
+		disguiseWalk = spr_red_demo_moving;
+		disguiseIdleUber = spr_red_demo_ubered;
+		disguiseWalkUber = spr_red_demo_moving_ubered;
+		disguiseIdle = spr_red_demo;
+		break;
+	case 4:
+		disguisedAs = "Heavy";
+		disguiseWalkSpeed = 0.3;
+		disguiseWalk = spr_red_heavy_moving;
+		disguiseIdleUber = spr_red_heavy_ubered;
+		disguiseWalkUber = spr_red_heavy_moving_ubered;
+		disguiseIdle = spr_red_heavy;
+		break;
+	case 5:
+		disguisedAs = "Engineer";
+		disguiseWalkSpeed = 0.5;
+		disguiseWalk = spr_red_engie_moving;
+		disguiseIdleUber = spr_red_engie_ubered;
+		disguiseWalkUber = spr_red_engie_moving_ubered;
+		disguiseIdle = spr_red_engie;
+		break;
+	case 6:
+		disguisedAs = "Medic";
+		disguiseWalkSpeed = 0.6;
+		disguiseWalk = spr_red_medic_moving;
+		disguiseIdleUber = spr_red_medic_ubered;
+		disguiseWalkUber = spr_red_medic_moving_ubered;
+		disguiseIdle = spr_red_medic;
+		break;
+	case 7:
+		disguisedAs = "Sniper";
+		disguiseWalkSpeed = 0.5;
+		disguiseWalk = spr_red_sniper_moving;
+		disguiseIdleUber = spr_red_sniper_ubered;
+		disguiseWalkUber = spr_red_sniper_moving_ubered;
+		disguiseIdle = spr_red_sniper;
+		break;
+	case 8:
+		disguisedAs = "Spy";
+		disguiseWalkSpeed = 0.6;
+		disguiseWalk = spr_red_spy_moving;
+		disguiseIdleUber = spr_red_spy_ubered;
+		disguiseWalkUber = spr_red_spy_moving_ubered;
+		disguiseIdle = spr_red_spy;
+		break;
+}
 
 
-
-// place spy state controller here v v  v
 
 var target = instance_nearest(x, y, red_flag);
 
@@ -50,6 +122,12 @@ switch (state) {
 		spy_roaming();
 		break;
 	case SpyState.Targeting:
+		//code here decides response if target visible [retrieved from roaming state]
+		break;
+	case SpyState.Sapping:
+		//code here
+		break;
+	case SpyState.Stabbing:
 		//code here
 		break;
 }

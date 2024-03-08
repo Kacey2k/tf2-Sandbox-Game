@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_movement_combat_heavy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "heavy",
-    "path": "folders/Scripts/Logic/heavy.yy",
+  "$GMScript":"",
+  "%Name":"scr_movement_combat_heavy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_movement_combat_heavy",
+  "parent":{
+    "name":"heavy",
+    "path":"folders/Scripts/Logic/heavy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

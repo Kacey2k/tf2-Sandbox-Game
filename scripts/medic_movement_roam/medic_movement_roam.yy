@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "medic_movement_roam",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "medic",
-    "path": "folders/Scripts/Logic/medic.yy",
+  "$GMScript":"",
+  "%Name":"medic_movement_roam",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"medic_movement_roam",
+  "parent":{
+    "name":"medic",
+    "path":"folders/Scripts/Logic/medic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

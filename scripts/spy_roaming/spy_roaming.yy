@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "spy_roaming",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "spy",
-    "path": "folders/Scripts/Logic/spy.yy",
+  "$GMScript":"",
+  "%Name":"spy_roaming",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spy_roaming",
+  "parent":{
+    "name":"spy",
+    "path":"folders/Scripts/Logic/spy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

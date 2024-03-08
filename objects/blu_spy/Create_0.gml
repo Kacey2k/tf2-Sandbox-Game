@@ -39,13 +39,22 @@ disguised = false;
 
 enum SpyState { // Roaming when no targets in sight - Targeting when target in sight
 	Roaming,
-	Targeting
+	Targeting,
+	Sapping,
+	Stabbing
 }
 
 state = SpyState.Roaming;
 
+// Disguise Vars
+disguisedAs = "";
+disguiseWalkSpeed = 0.6;
+disguiseWalk = spr_blu_spy_moving;
+disguiseIdleUber = spr_blu_spy_ubered;
+disguiseWalkUber = spr_blu_spy_moving_ubered;
+disguiseIdle = spr_blu_spy;
 
-
+setDisguise = irandom(8);
 
 // Movement
 hspeed = 0;

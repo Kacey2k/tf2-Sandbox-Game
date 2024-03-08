@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "sound_rocket_fired",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "hitscan",
-    "path": "folders/Scripts/Audio/hitscan.yy",
+  "$GMScript":"",
+  "%Name":"sound_rocket_fired",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sound_rocket_fired",
+  "parent":{
+    "name":"hitscan",
+    "path":"folders/Scripts/Audio/hitscan.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

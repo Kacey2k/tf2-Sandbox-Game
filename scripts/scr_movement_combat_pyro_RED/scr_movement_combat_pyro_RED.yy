@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_movement_combat_pyro_RED",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "pyro",
-    "path": "folders/Scripts/Logic/pyro.yy",
+  "$GMScript":"",
+  "%Name":"scr_movement_combat_pyro_RED",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_movement_combat_pyro_RED",
+  "parent":{
+    "name":"pyro",
+    "path":"folders/Scripts/Logic/pyro.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

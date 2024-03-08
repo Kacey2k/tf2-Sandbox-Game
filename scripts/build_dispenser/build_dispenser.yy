@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "build_dispenser",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "engie",
-    "path": "folders/Scripts/Logic/engie.yy",
+  "$GMScript":"",
+  "%Name":"build_dispenser",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"build_dispenser",
+  "parent":{
+    "name":"engie",
+    "path":"folders/Scripts/Logic/engie.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

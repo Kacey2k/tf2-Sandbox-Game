@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_avoid_collision",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Logic",
-    "path": "folders/Scripts/Logic.yy",
+  "$GMScript":"",
+  "%Name":"scr_avoid_collision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_avoid_collision",
+  "parent":{
+    "name":"Logic",
+    "path":"folders/Scripts/Logic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

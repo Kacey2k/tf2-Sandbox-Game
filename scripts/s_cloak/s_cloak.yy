@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"s_cloak",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"s_cloak",
+  "parent":{
+    "name":"spy",
+    "path":"folders/Scripts/Logic/spy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

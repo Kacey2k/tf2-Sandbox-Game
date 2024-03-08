@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "build_sentry_red",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "red_engie",
-    "path": "folders/Scripts/Logic/engie/red_engie.yy",
+  "$GMScript":"",
+  "%Name":"build_sentry_red",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"build_sentry_red",
+  "parent":{
+    "name":"red_engie",
+    "path":"folders/Scripts/Logic/engie/red_engie.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
