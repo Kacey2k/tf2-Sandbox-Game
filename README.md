@@ -5,7 +5,7 @@
 
 # Current Issues
 - Muzzle Flashes placed where they may not make most sense for some entities due to code inheritance.
-- Buildings Do Not have max Health when upgraded, a check for if it has been damaged before upgrading will be added in the future.
+- Buildings Do Not have max Health when upgraded, adding the new max health when upgraded will be added in the future.
 - Medics on rare occassion will get stuck in Uber when pocketing another Medic.
 - Snipers can sometimes ignore walls when scoped.
 - Snipers can sometimes get stuck in the scoped state.
