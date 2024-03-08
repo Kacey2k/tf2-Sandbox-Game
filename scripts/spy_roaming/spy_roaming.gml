@@ -1,6 +1,6 @@
 function spy_roaming(){
 	
-	var target = instance_nearest(x, y, red_flag)
+	var target = instance_nearest(x, y, red_flag);
 	
 	if (target != noone && point_distance(x, y, target.x, target.y) <= detectionDistance) {
 		state = SpyState.Targeting
@@ -31,7 +31,7 @@ function spy_roaming(){
 					moveTimer = 0;
 					break;
 				} else {
-					hspeed = -0.6;
+					hspeed = -spySpeed;
 					vspeed = 0;
 					moveDuration = 3;
 					break;
@@ -41,7 +41,7 @@ function spy_roaming(){
 					moveTimer = 0;
 					break;
 				} else {
-					hspeed = 0.6;
+					hspeed = spySpeed;
 					vspeed = 0;
 					moveDuration = 3;
 					break;
@@ -52,7 +52,7 @@ function spy_roaming(){
 					break;
 				} else {
 					hspeed = 0;
-					vspeed = -0.6;
+					vspeed = -spySpeed;
 					moveDuration = 3;
 					break;
 				}
@@ -62,7 +62,7 @@ function spy_roaming(){
 					break;
 				} else {
 					hspeed = 0;
-					vspeed = 0.6;
+					vspeed = spySpeed;
 					moveDuration = 3;
 					break;
 				}
@@ -71,8 +71,8 @@ function spy_roaming(){
 					moveTimer = 0;
 					break;
 				} else {
-					hspeed = -0.3;
-					vspeed = -0.3;
+					hspeed = -spySpeed/2;
+					vspeed = -spySpeed/2;
 					moveDuration += 5;
 					break;
 				}
@@ -81,8 +81,8 @@ function spy_roaming(){
 					moveTimer = 0;
 					break;
 				} else {
-					hspeed = 0.3;
-					vspeed = 0.3;
+					hspeed = spySpeed/2;
+					vspeed = spySpeed/2;
 					moveDuration += 5;
 					break;
 				}
@@ -91,8 +91,8 @@ function spy_roaming(){
 					moveTimer = 0;
 					break;
 				} else {
-					hspeed = 0.3;
-					vspeed = -0.3;
+					hspeed = spySpeed/2;
+					vspeed = -spySpeed/2;
 					moveDuration += 5;
 					break;
 				}
@@ -101,8 +101,8 @@ function spy_roaming(){
 					moveTimer = 0;
 					break;
 				} else {
-					hspeed = -0.3;
-					vspeed = 0.3;
+					hspeed = -spySpeed/2;
+					vspeed = spySpeed/2;
 					moveDuration += 5;
 					break;
 				}

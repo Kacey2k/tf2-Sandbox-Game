@@ -28,16 +28,23 @@ show_debug_message("NPC Spawn Event [ Username: " + string(npc_username) + " | C
 
 // Spy Vars
 
+target = instance_nearest(x, y, red_flag);
+
+sappingTime = false;
+sappingDistance = 10;
+stabbingTime = false;
+stabbingDistance = 10;
+
+spySpeed = 0.6;
+
 seen = true;
 canCloak = true;
 cloaked = false;
-cloakTimerReset = 540;
+cloakTimerReset = 540; // 9 seconds of cloak
 cloakTimer = cloakTimerReset;
 detectionDistance = 300;
 
-disguised = false;
-
-enum SpyState { // Roaming when no targets in sight - Targeting when target in sight
+enum SpyState { // Roaming when no targets in sight - Targeting when target in sight which determines the appropriate response
 	Roaming,
 	Targeting,
 	Sapping,
@@ -47,14 +54,28 @@ enum SpyState { // Roaming when no targets in sight - Targeting when target in s
 state = SpyState.Roaming;
 
 // Disguise Vars
+
+enum DisguiseBLU { // state switcher for the spy's current disguise
+	Scout,
+	Soldier,
+	Pyro,
+	Demo,
+	Heavy,
+	Engie,
+	Medic,
+	Sniper,
+	Spy
+}
+
+disguised = false;
+currentDisguise = DisguiseBLU.Scout;
+
 disguisedAs = "";
 disguiseWalkSpeed = 0.6;
 disguiseWalk = spr_blu_spy_moving;
 disguiseIdleUber = spr_blu_spy_ubered;
 disguiseWalkUber = spr_blu_spy_moving_ubered;
 disguiseIdle = spr_blu_spy;
-
-setDisguise = irandom(8);
 
 // Movement
 hspeed = 0;

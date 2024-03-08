@@ -37,8 +37,14 @@ if (damageCheck != noone && nearestDistance <= damage_range) {
     }
 }
 
-switch setDisguise { // Since this is the BLU spy, disguises will be of RED players
-	case 0:
+if (disguised = true) && (cloaked = false) {
+	spySpeed = disguiseWalkSpeed;
+} else {
+	spySpeed = 0.6;
+}
+
+switch (currentDisguise) { // Since this is the BLU spy, disguises will be of RED players
+	case DisguiseBLU.Scout:
 		disguisedAs = "Scout";
 		disguiseWalkSpeed = 0.6; //cannot exceed spy's max speed for scout
 		disguiseWalk = spr_red_scout_moving;
@@ -46,7 +52,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_scout_moving_ubered;
 		disguiseIdle = spr_red_scout;
 		break;
-	case 1:
+	case DisguiseBLU.Soldier:
 		disguisedAs = "Soldier";
 		disguiseWalkSpeed = 0.4;
 		disguiseWalk = spr_red_soldier_moving;
@@ -54,7 +60,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_soldier_moving_ubered;
 		disguiseIdle = spr_red_soldier;
 		break;
-	case 2:
+	case DisguiseBLU.Pyro:
 		disguisedAs = "Pyro";
 		disguiseWalkSpeed = 0.5;
 		disguiseWalk = spr_red_pyro_moving;
@@ -62,7 +68,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_pyro_moving_ubered;
 		disguiseIdle = spr_red_pyro;
 		break;
-	case 3:
+	case DisguiseBLU.Demo:
 		disguisedAs = "Demoman";
 		disguiseWalkSpeed = 0.45;
 		disguiseWalk = spr_red_demo_moving;
@@ -70,7 +76,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_demo_moving_ubered;
 		disguiseIdle = spr_red_demo;
 		break;
-	case 4:
+	case DisguiseBLU.Heavy:
 		disguisedAs = "Heavy";
 		disguiseWalkSpeed = 0.3;
 		disguiseWalk = spr_red_heavy_moving;
@@ -78,7 +84,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_heavy_moving_ubered;
 		disguiseIdle = spr_red_heavy;
 		break;
-	case 5:
+	case DisguiseBLU.Engie:
 		disguisedAs = "Engineer";
 		disguiseWalkSpeed = 0.5;
 		disguiseWalk = spr_red_engie_moving;
@@ -86,7 +92,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_engie_moving_ubered;
 		disguiseIdle = spr_red_engie;
 		break;
-	case 6:
+	case DisguiseBLU.Medic:
 		disguisedAs = "Medic";
 		disguiseWalkSpeed = 0.6;
 		disguiseWalk = spr_red_medic_moving;
@@ -94,7 +100,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_medic_moving_ubered;
 		disguiseIdle = spr_red_medic;
 		break;
-	case 7:
+	case DisguiseBLU.Sniper:
 		disguisedAs = "Sniper";
 		disguiseWalkSpeed = 0.5;
 		disguiseWalk = spr_red_sniper_moving;
@@ -102,7 +108,7 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		disguiseWalkUber = spr_red_sniper_moving_ubered;
 		disguiseIdle = spr_red_sniper;
 		break;
-	case 8:
+	case DisguiseBLU.Spy:
 		disguisedAs = "Spy";
 		disguiseWalkSpeed = 0.6;
 		disguiseWalk = spr_red_spy_moving;
@@ -112,55 +118,37 @@ switch setDisguise { // Since this is the BLU spy, disguises will be of RED play
 		break;
 }
 
-
-
-var target = instance_nearest(x, y, red_flag);
-
 switch (state) {
 	case SpyState.Roaming:
-		//code here
+	
 		spy_roaming();
 		break;
+		
 	case SpyState.Targeting:
-		//code here decides response if target visible [retrieved from roaming state]
+	
+		spy_targeting();
+		
+		if sappingTime = true {
+			state = SpyState.Sapping;
+			break;
+		} else if  stabbingTime = true {
+			state = SpyState.Stabbing;
+			break;
+		}
 		break;
+		
 	case SpyState.Sapping:
-		//code here
+	
+		strat_sapping();
+		
 		break;
+		
 	case SpyState.Stabbing:
+	
 		//code here
+		
 		break;
 }
-
-// Targeting and Movement
-if (target != noone && point_distance(x, y, target.x, target.y) <= shooting_range) {
-    var obstruction = collision_line(x, y, target.x, target.y, obj_solid, false, true);
-    if (obstruction == noone) {
-        combatDirection = irandom(4);
-        scr_movement_combat();
-
-        if (can_shoot) {
-            var bullet = instance_create_layer(x, y, "Instances", obj_bullet_blu);
-			bullet.owner = npc_username;
-			
-            instance_create_layer(x, y, "Effects", wep_flash);
-            
-            var aim_direction = point_direction(x, y, target.x, target.y);
-            var aim_error = irandom_range(-3, 3);
-			
-            bullet.direction = aim_direction + aim_error;
-            bullet.speed = bullet_speed;
-            
-            can_shoot = false;
-        }
-    } else {
-        spy_roaming();  // Normal movement
-    }
-} else {
-    spy_roaming();  // No target, normal movement
-}
-
-
 
 
 // Cooldown

@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"zx_ignore",
+  "%Name":"strat_sapping",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"zx_ignore",
+  "name":"strat_sapping",
   "parent":{
-    "name":"Temp",
-    "path":"folders/Scripts/Temp.yy",
+    "name":"spy",
+    "path":"folders/Scripts/Logic/spy.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
