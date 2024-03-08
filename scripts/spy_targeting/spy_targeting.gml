@@ -14,20 +14,19 @@ function spy_targeting(){ // Depending on the target, we will choose a different
 	    var best_target_score = -1;
     
 	    with (red_flag) {
-	        if (id != other.id) {
-	            var dist = point_distance(x, y, other.x, other.y);
-	            if (dist <= other.detectionDistance) {
-	                var target_priority = getClassPrioritySpy(object_index);
-	                var dist_factor = 1 - (dist / other.detectionDistance);
+	        var dist = point_distance(x, y, other.x, other.y);
+				
+	        if (dist <= other.detectionDistance) {
+	            var target_priority = getClassPrioritySpy(object_index);
+	            var dist_factor = 1 - (dist / other.detectionDistance);
 
-	                // our score will tell him who is the most important target nearby to engage
-					// considering the enemy's distance & their weighed priority
-	                var target_score = target_priority + dist_factor;
+	            // our score will tell him who is the most important target nearby to engage
+				// considering the enemy's distance & their weighed priority
+	            var target_score = target_priority + dist_factor;
 
-	                if (target_score > best_target_score) {
-	                    best_target_score = target_score;
-	                    best_target = id;
-	                }
+	            if (target_score > best_target_score) {
+	                best_target_score = target_score;
+	                best_target = id;
 	            }
 	        }
 	    }
