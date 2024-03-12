@@ -19,11 +19,11 @@ function spy_targeting(){ // Depending on the target, we will choose a different
 	        if (dist <= other.detectionDistance) {
 	            var target_priority = getClassPrioritySpy(object_index);
 	            var dist_factor = 1 - (dist / other.detectionDistance);
-
+				
 	            // our score will tell him who is the most important target nearby to engage
 				// considering the enemy's distance & their weighed priority
 	            var target_score = target_priority + dist_factor;
-
+				
 	            if (target_score > best_target_score) {
 	                best_target_score = target_score;
 	                best_target = id;
@@ -38,9 +38,11 @@ function spy_targeting(){ // Depending on the target, we will choose a different
 			if (target.object_index = red_sentry.isSapped = false) || (target.object_index = red_dispenser.isSapped = false) {
 				sappingTime = true; // only will choose to sap if.. the building is not already being sapped
 				stabbingTime = false;
+				return;
 			} else {
 				sappingTime = false;
 				stabbingTime = true;
+				return;
 			}
 	    }
 	}

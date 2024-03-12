@@ -46,7 +46,7 @@ if (disguised = true) && (cloaked = false) {
 switch (currentDisguise) { // Since this is the BLU spy, disguises will be of RED players
 	case DisguiseBLU.Scout:
 		disguisedAs = "Scout";
-		disguiseWalkSpeed = 0.6; //cannot exceed spy's max speed for scout
+		disguiseWalkSpeed = 0.6; //cannot exceed spy's max speed 0.6
 		disguiseWalk = spr_red_scout_moving;
 		disguiseIdleUber = spr_red_scout_ubered;
 		disguiseWalkUber = spr_red_scout_moving_ubered;
@@ -128,14 +128,13 @@ switch (state) {
 	
 		spy_targeting();
 		
-		if sappingTime = true {
+		if (sappingTime) {
 			state = SpyState.Sapping;
 			break;
-		} else if  stabbingTime = true {
+		} else if  (stabbingTime) {
 			state = SpyState.Stabbing;
 			break;
 		}
-		break;
 		
 	case SpyState.Sapping:
 	
@@ -145,7 +144,7 @@ switch (state) {
 		
 	case SpyState.Stabbing:
 	
-		//code here
+		strat_stabbing();
 		
 		break;
 }

@@ -1,7 +1,5 @@
 function spy_roaming(){
 	
-	var target = instance_nearest(x, y, red_flag);
-	
 	if (target != noone && point_distance(x, y, target.x, target.y) <= detectionDistance) {
 		state = SpyState.Targeting
 		return;

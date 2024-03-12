@@ -31,6 +31,11 @@ function strat_sapping(){
 				state = SpyState.Roaming;
 				return;
 			}
+		} else {
+			
+			state = SpyState.Roaming; // obstruction detected, abort
+			sappingTime = false;
+			return;
 		}
 	}
 }

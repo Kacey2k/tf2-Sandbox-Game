@@ -23,16 +23,30 @@ function engie_Movement(){
 			
 			repairSentryTime -= 1;
 			
-			if repairSentryTime <= 0 { // each swing = +hp
+			if mySentry.isSapped = true {
+				
+				var sapRemoval = 3;
+				
+				if repairSentryTime <= 0 { // On 3rd hit, remove sapper, enable repairing
+					repairSentryTime = repairSentryTimeReset
+					canRepairSentry = true;
+					
+					sapRemoval -= 1;
+					
+					if sapRemoval <= 0 {
+						mySentry.isSapped = false;
+					}
+				}
+				
+			} else if repairSentryTime <= 0 { // each swing = +25 hp
 				repairSentryTime = repairSentryTimeReset
 				canRepairSentry = true;
 				mySentry.currentHealth += 25;
 				
 			}
-			
 		}
-		
-	} else if (mydispenser != noone && mydispenser.currentHealth < mydispenser.maxHealth) && (collision_line(x, y, mydispenser.x, mydispenser.y, obj_obstacle_type, false, true) = noone) { // Repair Despenser script
+				// dispenser repair script
+	} else if (mydispenser != noone && mydispenser.currentHealth < mydispenser.maxHealth) && (collision_line(x, y, mydispenser.x, mydispenser.y, obj_obstacle_type, false, true) = noone) {
 	    
 		speed = 0.5;
 		direction = point_direction(x, y, mydispenser.x, mydispenser.y); // walking to dispenser
@@ -43,10 +57,25 @@ function engie_Movement(){
 			
 			repairDispenserTime -= 1;
 			
-			if repairDispenserTime <= 0 { // each swing = +hp
+			if myDispenser.isSapped = true {
+				
+				var sapRemovalDispenser = 3;
+				
+				if repairDispenserTime <= 0 { // On 3rd hit, remove sapper, enable repairing
+					repairDispenserTime = repairDispenserTimeReset
+					canRepairDispenser = true;
+					
+					sapRemovalDispenser -= 1;
+					
+					if sapRemovalDispenser <= 0 {
+						myDispenser.isSapped = false;
+					}
+				}
+				
+			} else if repairDispenserTime <= 0 { // each swing = +25 hp
 				repairDispenserTime = repairDispenserTimeReset
 				canRepairDispenser = true;
-				mydispenser.currentHealth += 25;
+				myDispenser.currentHealth += 25;
 				
 			}
 			
