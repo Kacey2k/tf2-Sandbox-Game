@@ -62,7 +62,7 @@ function getClassPrioritySpy(target_type) {
         case red_pyro: return 5;
 		case red_sniper: return 4;
 		case red_demo: return 3;
-		//case red_spy: return 2;
+		case red_spy: return 2;
 		case red_scout: return 1;
         default: return 0;
     }

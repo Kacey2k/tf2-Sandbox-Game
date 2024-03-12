@@ -190,26 +190,23 @@ if (isBurning) {
 
 var wholeMove = (sqr(vspeed)) + (sqr(hspeed))
 
-if wholeMove > 0 && (cloaked) {
+if wholeMove > 0 {
+	isMoving = true;
+	isChoking = false;
+} else {
+	isMoving = false;
+}
+
+if (isMoving) && (cloaked) {
 	cloakTimer -= 1;
 	if cloakTimer <= 0 {
 		cloaked = false;
 	}
 }
 
-if (wholeMove > 0) && (isUbered = true) {
-	sprite_index = spr_blu_spy_moving_ubered;
-	isChoking = false;
-} else if (wholeMove = 0) && (isUbered = true) {
-	sprite_index = spr_blu_spy_ubered;
-	audio_stop_sound(walk_sound_instance);
-} else if (wholeMove > 0) && (isUbered = false) {
-	sprite_index = spr_blu_spy_moving;
-	isChoking = false;
-} else {
-	sprite_index = spr_blu_spy;
-	audio_stop_sound(walk_sound_instance);
-}
+
+spriteControllerSpy();
+
 
 
 // Uber Handling - See ALARM 3

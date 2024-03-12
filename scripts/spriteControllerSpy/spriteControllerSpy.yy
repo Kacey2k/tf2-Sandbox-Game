@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"spriteControllerSpy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spriteControllerSpy",
+  "parent":{
+    "name":"spy",
+    "path":"folders/Scripts/Logic/spy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

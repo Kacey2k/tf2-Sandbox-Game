@@ -1,4 +1,4 @@
-var bluCharacter = irandom_range(0,7);
+var bluCharacter = irandom_range(0,8);
 
 switch (bluCharacter) {
     case 0: // Blu Scout
@@ -32,6 +32,10 @@ switch (bluCharacter) {
 	case 7: // Blu Sniper
 		var createObject8 = instance_create_layer(mouse_x, mouse_y, "Instances", blu_sniper);
 		createObject8.owner = "The Universe";
+		break;
+	case 8: // Blu Spy
+		var createObject9 = instance_create_layer(mouse_x, mouse_y, "Instances", blu_spy);
+		createObject9.owner = "The Universe";
 		break;
 }
 
