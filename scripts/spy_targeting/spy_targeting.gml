@@ -35,10 +35,12 @@ function spy_targeting(){ // Depending on the target, we will choose a different
 	    if (best_target != undefined) {
 	        target = best_target;
 			
-			if (target.object_index = red_sentry.isSapped = false) || (target.object_index = red_dispenser.isSapped = false) {
-				sappingTime = true; // only will choose to sap if.. the building is not already being sapped
-				stabbingTime = false;
-				return;
+			if (target.object_index = red_sentry) || (target.object_index = red_dispenser) {
+				if (!target.isSapped) { // only activates SAPping time if target is a building & not already sapped.
+					sappingTime = true;
+					stabbingTime = false;
+					return;
+				}
 			} else {
 				sappingTime = false;
 				stabbingTime = true;

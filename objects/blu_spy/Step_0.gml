@@ -121,11 +121,14 @@ switch (currentDisguise) { // Since this is the BLU spy, disguises will be of RE
 switch (state) {
 	case SpyState.Roaming:
 	
+		show_debug_message("SPY: ROAMING")
+	
 		spy_roaming();
 		break;
 		
 	case SpyState.Targeting:
-	
+		
+		show_debug_message("SPY: TARGETING")
 		spy_targeting();
 		
 		if (sappingTime) {
@@ -137,13 +140,15 @@ switch (state) {
 		}
 		
 	case SpyState.Sapping:
-	
+		
+		show_debug_message("SPY: SAPPING")
 		strat_sapping();
 		
 		break;
 		
 	case SpyState.Stabbing:
-	
+		
+		show_debug_message("SPY: STABBING")
 		strat_stabbing();
 		
 		break;

@@ -1,6 +1,6 @@
 function spy_roaming(){
 	
-	if (target != noone && point_distance(x, y, target.x, target.y) <= detectionDistance) {
+	if (target != noone) && (point_distance(x, y, target.x, target.y) <= detectionDistance) {
 		state = SpyState.Targeting
 		return;
 		// Target Detected, skip rest of code

@@ -40,7 +40,7 @@ function strat_stabbing(){
 				if stabTime <= 0 {
 					
 					stabTime = maxStabTime;
-					if stabChance >= 90 {
+					if stabChance >= 75 {
 						
 						target.hp = 0;
 						backstab = true;

@@ -57,7 +57,7 @@ function engie_Movement(){
 			
 			repairDispenserTime -= 1;
 			
-			if myDispenser.isSapped = true {
+			if mydispenser.isSapped = true {
 				
 				var sapRemovalDispenser = 3;
 				
@@ -68,14 +68,14 @@ function engie_Movement(){
 					sapRemovalDispenser -= 1;
 					
 					if sapRemovalDispenser <= 0 {
-						myDispenser.isSapped = false;
+						mydispenser.isSapped = false;
 					}
 				}
 				
 			} else if repairDispenserTime <= 0 { // each swing = +25 hp
 				repairDispenserTime = repairDispenserTimeReset
 				canRepairDispenser = true;
-				myDispenser.currentHealth += 25;
+				mydispenser.currentHealth += 25;
 				
 			}
 			
